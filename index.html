@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Brain Wire - Verification</title>
+    <style>
+        body { margin: 0; padding: 0; background: #000; color: #fff; display: flex; align-items: center; justify-content: center; height: 100vh; font-family: monospace; text-align: center; }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>⚡ Verifying Connection...</h1>
+        <p>Please wait while the ad plays.</p>
+        <p id="timer" style="font-size: 24px; color: #00ff88;">15s</p>
+    </div>
+
+    <!-- ADSTERRA POPUNDER SCRIPT -->
+    <script src="https://environmenttalentrabble.com/f9/a2/1a/f9a21a9b4aedda9a27011895f0b0dbe0.js"></script>
+
+    <script>
+        let timeLeft = 15;
+        const timerEl = document.getElementById('timer');
+        
+        const countdownInterval = setInterval(() => {
+            timeLeft--;
+            if (timerEl) timerEl.textContent = timeLeft + 's';
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                window.close(); 
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
