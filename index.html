@@ -2,15 +2,33 @@
 <html>
 <head>
   <title>Brain Wire Verification</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { background: #000; color: #fff; font-family: monospace; text-align: center; padding-top: 100px; margin: 0; }
+    body { background: #000; color: #fff; font-family: monospace; text-align: center; margin: 0; padding-top: 100px; }
+    h1 { color: #00ff88; font-size: 28px; }
+    p { color: #a0aab5; font-size: 16px; margin-top: 10px; }
+    #timer { font-size: 48px; color: #00d4ff; margin-top: 30px; font-weight: bold; text-shadow: 0 0 20px rgba(0,255,136,0.4); }
   </style>
-  <!-- ADSTERRA SOCIAL BAR CODE (Pays per VIEW, no click needed) -->
-  <script src="<script src="https://environmenttalentrabble.com/45/03/82/450382d6eecd7019fd72c84b97f97ca4.js"></script>
-"></script>
+  <!-- ADSTERRA POPUNDER CODE (Must be in <head>) -->
+  <script src="https://environmenttalentrabble.com/45/03/82/450382d6eecd7019fd72c84b97f97ca4.js"></script>
 </head>
 <body>
-  <h1>Test page</h1>
-  <p>The Social Bar should appear on the edge of your screen.</p>
+  <h1>⚡ Verifying Connection</h1>
+  <p>Please wait while the verification completes.</p>
+  <div id="timer">15s</div>
+
+  <script>
+    let timeLeft = 15;
+    const timerEl = document.getElementById('timer');
+    const countdownInterval = setInterval(() => {
+      timeLeft--;
+      if (timerEl) timerEl.textContent = timeLeft + 's';
+      if (timeLeft <= 0) {
+        clearInterval(countdownInterval);
+        window.close(); 
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
